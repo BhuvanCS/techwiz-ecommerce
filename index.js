@@ -1,3 +1,5 @@
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
 function openingcart() {
     const cartContainer = document.getElementById("cart-container");
     const dishesContainer = document.querySelector(".dishes");
@@ -10,7 +12,7 @@ function openingcart() {
       dishesContainer.style.gridTemplateColumns = "repeat(2, 1fr)";
       dishesContainer.style.width = "63.5%";
     }
-    
+    updateCartDisplay();
   }
   
   function result() {
@@ -35,7 +37,7 @@ function openingcart() {
     //event.preventDefault();
   }
   
-  const cart = [];
+ 
   
   function addToCart(item) {
     const existingItem = cart.find((cartItem) => cartItem.name === item.name);
@@ -44,6 +46,7 @@ function openingcart() {
     } else {
       cart.push(item);
     }
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
   
   function updateCartDisplay() {
@@ -90,6 +93,7 @@ function openingcart() {
         cart.splice(cart.indexOf(item), 1);
       }
     }
+    localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
   }
   
