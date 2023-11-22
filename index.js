@@ -28,7 +28,7 @@ function openingcart() {
       quantity: 1,
       image: itemImage,
     };
-    alert(cartItem);
+    alert(cartItem.name + " added to cart");
   
     addToCart(cartItem);
     updateCartDisplay();
