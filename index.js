@@ -2,23 +2,25 @@ function openingcart() {
     const cartContainer = document.getElementById("cart-container");
     const dishesContainer = document.querySelector(".dishes");
   
-    if (cartContainer.style.display === "block") {
-      dishesContainer.style.gridTemplateColumns = "repeat(2, 1fr)";
-      dishesContainer.style.width = "63.5%";
-    } else {
+    if (cartContainer.style.display !== "block") {
       cartContainer.style.display = "block";
+      
+    }
+    if(dishesContainer){
       dishesContainer.style.gridTemplateColumns = "repeat(2, 1fr)";
       dishesContainer.style.width = "63.5%";
     }
+    
   }
   
   function result() {
+    
     const clickedElement = document.activeElement;
     const itemValue = clickedElement.getAttribute("value");
     const itemPrice = parseFloat(
       clickedElement.previousElementSibling.textContent.slice(1)
     );
-    const itemImage = clickedElement.parentElement.querySelector("img").src;
+    const itemImage = clickedElement.parentElement.parentElement.querySelector("img").src;
   
     const cartItem = {
       name: itemValue,
@@ -26,10 +28,11 @@ function openingcart() {
       quantity: 1,
       image: itemImage,
     };
+    alert(cartItem);
   
     addToCart(cartItem);
     updateCartDisplay();
-    event.preventDefault();
+    //event.preventDefault();
   }
   
   const cart = [];

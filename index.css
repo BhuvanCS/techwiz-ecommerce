@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 :root {
-  --red: #ce3232;
-  --black: #192a56;
+  --red: #3739aa;
+  --black: #0f1b3a;
   --light-color: #666;
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
@@ -19,7 +19,8 @@
 }
 
 html {
-  background-color:#FFF5F5;
+  background-color:#CAF0F8;
+  background-color:#ffffff;
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 5.5rem;
@@ -51,8 +52,8 @@ header .logo {
   font-weight: bolder;
 }
 
-header .logo i {
-  color: var(--red);
+header .logo img {
+  width: 50px;
 }
 
 header .navbar a {
@@ -94,20 +95,20 @@ header .icons #menu-bars {
 }
 
 .sub-heading {
-  margin-top: 73px;
+  margin-top: 18px;
   text-align: center;
   padding-left: 130px;
   color: var(--red);
-  font-size: 2.5rem;
-  padding-top: 1rem;
+  font-size: 2.75rem;
+  padding-bottom: 2rem;
 }
 
 .heading {
-  margin-top: 18px;
+  margin-top: 100px;
   text-align: center;
   color: var(--black);
-  font-size: 3rem;
-  padding-bottom: 2rem;
+  font-size: 3.2rem;
+  padding-bottom: 1.5rem;
   padding-left: 130px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -166,9 +167,10 @@ header .icons #menu-bars {
   margin-left: 170px;
 }
 
+
 .dishes .box-container .box {
   padding: 1.5rem 0.5rem;
-  background: #fff;
+  background: #ffffff;
   border-radius: 0.5rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
   box-shadow: var(--box-shadow);
@@ -214,7 +216,7 @@ header .icons #menu-bars {
   padding: 0.5rem 1.5rem;
 }
 .dishes .box-container .box a:hover {
-  background: black;
+  background: #67a6c9;
   transform: scale(1.02);
 }
 

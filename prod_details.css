@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+:root {
+  --red: #3739aa;
+  --black: #0f1b3a;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  background-color:#CAF0F8;
+  background-color:#ffffff;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+
+header .logo {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+header .logo img {
+  width: 50px;
+}
+
+header .navbar a {
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--black);
+  font-weight: bold;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  color: #fff;
+  background: var(--red);
+}
+
+header .icons i,
+header .icons a {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--black);
+  border-radius: 50%;
+  background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+  color: #fff;
+  background: var(--red);
+}
+
+header .icons #menu-bars {
+  display: none;
+}
+
+
+.product-container {
+    max-width: 800px;
+    margin: 150px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pchild {
+    width: 48%; /* Adjust the width to leave space for margins */
+    margin-bottom: 20px;
+}
+.pchild:nth-child(3) {
+    width: 100%;
+    margin-left: 20px;
+}
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.product-info {
+    flex-grow: 1; /* Take remaining space beside the image */
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.variant-buttons {
+    margin-bottom: 20px;
+}
+
+.variant-button {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    color: black ;
+    border: black solid 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.variant-button:hover {
+    background: #67a6c9;
+    transform: scale(1.02);
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #03045E;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-to-cart-btn:hover {
+    background: #67a6c9;
+    transform: scale(1.02);
+}
+
+.prod-desc {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.product-details {
+    font-size: 17px;
+    font-weight: 600;
+    color: #555;
+    flex-direction: column;
+}
+.subtitle {
+    font-weight: 900;
+}
