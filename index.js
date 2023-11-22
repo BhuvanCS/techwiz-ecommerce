@@ -99,11 +99,22 @@ function openingcart() {
     const dishesContainer = document.querySelector(".dishes");
     cartCloseButton.addEventListener("click", () => {
       cartContainer.style.display = "none";
-      dishesContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
+      if(dishesContainer) {
+        dishesContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
       dishesContainer.style.width = "92%";
+      }
+      
     });
     cartContainer.addEventListener("click", (event) => {
       event.stopPropagation();
     });
   }
+  
+  function setbutton(clickedBtn){
+    const buttons = document.querySelectorAll('.variant-button');
+    buttons.forEach(button => button.classList.remove('active'));
+    clickedBtn.classList.add('active');
+    const cost = document.getElementById('product-price');
+    cost.textContent = clickedBtn.getAttribute('value');  
+    }
   

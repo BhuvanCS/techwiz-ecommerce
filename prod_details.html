@@ -18,6 +18,7 @@
     
       <script src="js/jquery-3.5.1.js"></script>
       <script src="https://kit.fontawesome.com/953eae4970.js" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/eac9678171.js" crossorigin="anonymous"></script>
       <script src="index.js"></script>  
     </head>
 </head>
@@ -46,10 +47,10 @@
         <div class="pchild product-info">
             <h2 class="product-title">Lenovo Yoga Slim 6 Intel Core i5 1240P 14"(35.5cm) 2.2K 300Nit Laptop</h2>
             <div class="variant-buttons">
-                <button class="variant-button">i5-11th Gen</button>
-                <button class="variant-button">i5-12th Gen</button>
+                <button id = 'button1' class="variant-button" onclick = "setbutton(this);" value = "₹60000">i5-11th Gen</button>
+                <button id = 'button2' class="variant-button" onclick = "setbutton(this);" value = "₹70000">i5-12th Gen</button>
             </div>
-            <p class="product-price">₹60000</p>
+            <p id = "product-price" class="product-price">₹60000</p>
             <button class="add-to-cart-btn" onclick="result(); openingcart();" value = "Lenovo Yoga Slim 6">Add to Cart</button>
             
         </div>
